@@ -1,38 +1,199 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Home Lab DevOps | Tácio Souza</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tácio Souza | Cloud Engineer & DevOps</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilo Base (Dark Theme inspirado no GitHub Dark) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #30363d;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #58a6ff;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #8b949e;
+        }
+
+        /* Seção de Introdução */
+        .intro {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 4px solid #58a6ff;
+        }
+
+        .intro h2 { margin-top: 0; color: #c9d1d9; }
+        .intro p { margin-bottom: 15px; }
+        .intro ul { list-style-type: square; padding-left: 20px; }
+        .intro li { margin-bottom: 5px; }
+
+        /* Grid de Cartões */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #58a6ff;
+        }
+
+        .card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #58a6ff;
+        }
+
+        .card h3 { margin: 10px 0; color: #c9d1d9; }
+        .card p { color: #8b949e; font-size: 0.95rem; margin-bottom: 20px; }
+
+        /* Botões dos Cards */
+        .btn {
+            display: inline-block;
+            background-color: #238636;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover { background-color: #2ea043; }
+        .btn.secondary { background-color: #30363d; }
+        .btn.secondary:hover { background-color: #3b434b; }
+
+        /* Status e Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #30363d;
+            color: #8b949e;
+            font-size: 0.9rem;
+        }
+        
+        .social-links a {
+            color: #58a6ff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        .social-links a:hover { color: #79c0ff; }
+
+    </style>
 </head>
 <body>
-  <h1>Home Lab DevOps</h1>
 
-  <p>
-    Este site documenta a construção de um <strong>Home Lab DevOps</strong>
-    com foco em Kubernetes, automação, observabilidade e arquitetura
-    inspirada em ambientes de produção.
-  </p>
+    <div class="container">
+        <header>
+            <h1>Tácio Souza</h1>
+            <div class="subtitle">Cloud Engineer | DevOps | Home Lab Project</div>
+        </header>
 
-  <h2>Objetivo</h2>
-  <ul>
-    <li>Documentar decisões técnicas reais</li>
-    <li>Compartilhar a evolução do ambiente</li>
-    <li>Servir como portfólio técnico</li>
-    <li>Base para produtos, serviços e oportunidades profissionais</li>
-  </ul>
+        <div class="intro">
+            <h2><i class="fas fa-bullseye"></i> Sobre este Ambiente</h2>
+            <p>Este site documenta a construção de um <strong>Home Lab DevOps</strong> com foco em Kubernetes, automação, observabilidade e arquitetura inspirada em ambientes de produção.</p>
+            <h3>Objetivos Principais:</h3>
+            <ul>
+                <li>Documentar decisões técnicas reais e desafios do dia a dia.</li>
+                <li>Compartilhar a evolução do ambiente e aprendizados (Linux, DevOps, Cloud, AIOps, GitOps).</li>
+                <li>Servir como base para produtos, serviços e oportunidades profissionais.</li>
+            </ul>
+        </div>
 
-  <h2>Status</h2>
-  <p>🚧 Em construção — primeiras publicações em breve.</p>
+        <div class="grid">
+            
+            <div class="card">
+                <div>
+                    <i class="fas fa-server"></i>
+                    <h3>Home Lab Docs</h3>
+                    <p>Documentação técnica completa da infraestrutura, clusters Kubernetes e automações implementadas.</p>
+                </div>
+                <a href="#" class="btn">Ler Documentação</a>
+            </div>
 
-  <h2>Contato</h2>
-  <p>
-    🔗 LinkedIn:
-    <a href="https://www.linkedin.com/in/taciosouzaoliveira/" target="_blank">
-      linkedin.com/in/taciosouzaoliveira
-    </a>
-    <br>
-    📺 YouTube: em breve
-  </p>
+            <div class="card">
+                <div>
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Portfólio & Carreira</h3>
+                    <p>Histórico profissional, transição de carreira, certificações e projetos entregues.</p>
+                </div>
+                <a href="#" class="btn">Ver Portfólio</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <i class="fas fa-recycle"></i>
+                    <h3>Projeto Reciclagem</h3>
+                    <p>Iniciativa de sustentabilidade e tecnologia. Transformando hardware e processos.</p>
+                </div>
+                <a href="#" class="btn secondary">Em Breve</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <i class="fas fa-users"></i>
+                    <h3>Comunidade & Fórum</h3>
+                    <p>Espaço para troca de conhecimentos sobre DevOps, transição de carreira e Home Labs.</p>
+                </div>
+                <a href="#" class="btn secondary">Em Breve</a>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>🚧 Status: <strong>Em construção</strong> — primeiras publicações em breve.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/taciosouzaoliveira" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="mailto:contato@tacio.cloud" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2026 Tácio Souza. Construíndo com IA, Kubernetes e Café.</p>
+        </div>
+    </div>
+
 </body>
 </html>
