@@ -31,13 +31,37 @@
 
         h1 {
             color: #58a6ff;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(88, 166, 255, 0.2); /* Leve brilho */
         }
 
         .subtitle {
             font-size: 1.1rem;
             color: #8b949e;
+            margin-bottom: 20px;
+        }
+
+        /* Tags de Skills */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .tag {
+            background-color: #21262d;
+            border: 1px solid #30363d;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: #c9d1d9;
+            transition: border-color 0.2s;
+        }
+
+        .tag:hover {
+            border-color: #58a6ff;
         }
 
         /* Seção de Introdução */
@@ -53,7 +77,7 @@
         .intro h2 { margin-top: 0; color: #c9d1d9; }
         .intro p { margin-bottom: 15px; }
         .intro ul { list-style-type: square; padding-left: 20px; }
-        .intro li { margin-bottom: 5px; }
+        .intro li { margin-bottom: 8px; }
 
         /* Grid de Cartões */
         .grid {
@@ -68,7 +92,7 @@
             border-radius: 8px;
             padding: 25px;
             text-align: center;
-            transition: transform 0.2s, border-color 0.2s;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -77,16 +101,17 @@
         .card:hover {
             transform: translateY(-5px);
             border-color: #58a6ff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
 
         .card i {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
             color: #58a6ff;
         }
 
-        .card h3 { margin: 10px 0; color: #c9d1d9; }
-        .card p { color: #8b949e; font-size: 0.95rem; margin-bottom: 20px; }
+        .card h3 { margin: 10px 0; color: #c9d1d9; font-size: 1.3rem; }
+        .card p { color: #8b949e; font-size: 0.95rem; margin-bottom: 25px; }
 
         /* Botões dos Cards */
         .btn {
@@ -97,30 +122,35 @@
             text-decoration: none;
             border-radius: 6px;
             font-weight: bold;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s, transform 0.1s;
         }
 
         .btn:hover { background-color: #2ea043; }
-        .btn.secondary { background-color: #30363d; }
-        .btn.secondary:hover { background-color: #3b434b; }
+        .btn:active { transform: scale(0.98); }
+        
+        .btn.secondary { background-color: #30363d; border: 1px solid #8b949e; }
+        .btn.secondary:hover { background-color: #3b434b; border-color: #c9d1d9; }
 
         /* Status e Footer */
         .footer {
             text-align: center;
             margin-top: 50px;
-            padding-top: 20px;
+            padding-top: 30px;
             border-top: 1px solid #30363d;
             color: #8b949e;
             font-size: 0.9rem;
         }
         
+        .social-links { margin-top: 15px; margin-bottom: 20px; }
         .social-links a {
             color: #58a6ff;
-            margin: 0 10px;
-            font-size: 1.5rem;
+            margin: 0 15px;
+            font-size: 1.8rem;
             text-decoration: none;
+            transition: color 0.2s, transform 0.2s;
+            display: inline-block;
         }
-        .social-links a:hover { color: #79c0ff; }
+        .social-links a:hover { color: #79c0ff; transform: translateY(-3px); }
 
     </style>
 </head>
@@ -129,17 +159,24 @@
     <div class="container">
         <header>
             <h1>Tácio Souza</h1>
-            <div class="subtitle">Cloud Engineer | DevOps | Lab Project</div>
+            <div class="subtitle">Cloud Engineer | DevOps | SysAdmin</div>
+            <div class="tags">
+                <span class="tag"><i class="fab fa-linux"></i> Linux/Debian</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">Terraform & Ansible</span>
+                <span class="tag">AIOps</span>
+                <span class="tag">DevSecOps</span>
+            </div>
         </header>
 
         <div class="intro">
-            <h2><i class="fas fa-bullseye"></i> Sobre este Ambiente</h2>
-            <p>Este site documenta a construção de um <strong>Home Lab DevOps</strong> com foco em Kubernetes, automação, observabilidade e arquitetura inspirada em ambientes de produção.</p>
+            <h2><i class="fas fa-terminal"></i> Sobre este Ambiente</h2>
+            <p>Este site documenta a construção de um <strong>Home Lab DevOps</strong> com foco em Kubernetes, automação (IaC), observabilidade e arquitetura inspirada em ambientes de produção.</p>
             <h3>Objetivos Principais:</h3>
             <ul>
-                <li>Documentar decisões técnicas reais e desafios do dia a dia.</li>
-                <li>Compartilhar a evolução do ambiente e aprendizados (Linux, DevOps, Cloud, AIOps, GitOps).</li>
-                <li>Servir como base para produtos, serviços e oportunidades profissionais.</li>
+                <li>Documentar decisões técnicas reais e desafios práticos de infraestrutura.</li>
+                <li>Compartilhar a evolução do ambiente e experimentações em Cloud, AIOps e GitOps.</li>
+                <li>Servir como base central para portfólio, projetos e desenvolvimento profissional contínuo.</li>
             </ul>
         </div>
 
@@ -149,34 +186,34 @@
                 <div>
                     <i class="fas fa-server"></i>
                     <h3>Home Lab Docs</h3>
-                    <p>Documentação técnica completa da infraestrutura, clusters Kubernetes e automações implementadas.</p>
+                    <p>Documentação técnica da infraestrutura, clusters Kubernetes locais (KVM/Libvirt) e automações.</p>
                 </div>
-                <a href="#" class="btn">Ler Documentação</a>
+                <a href="https://github.com/taciosouzaoliveira/homelab-lfcs-cka" class="btn" target="_blank">Ler Documentação</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <i class="fas fa-robot"></i>
+                    <h3>Projeto Redeem AI</h3>
+                    <p>Agente de observabilidade integrando LLMs locais a logs de sistema. Projeto prático com foco educacional em segurança.</p>
+                </div>
+                <a href="https://github.com/taciosouzaoliveira" class="btn secondary" target="_blank">Ver Código</a>
             </div>
 
             <div class="card">
                 <div>
                     <i class="fas fa-briefcase"></i>
                     <h3>Portfólio & Carreira</h3>
-                    <p>Histórico profissional, transição de carreira, certificações e projetos entregues.</p>
+                    <p>Histórico profissional, jornada de certificações (LFCS/CKA) e ferramentas de migração desenvolvidas.</p>
                 </div>
-                <a href="#" class="btn">Ver Portfólio</a>
+                <a href="https://github.com/taciosouzaoliveira" class="btn secondary" target="_blank">Ver Repositórios</a>
             </div>
 
             <div class="card">
                 <div>
                     <i class="fas fa-recycle"></i>
                     <h3>Projeto Reciclagem</h3>
-                    <p>Iniciativa de sustentabilidade e tecnologia. Transformando hardware e processos.</p>
-                </div>
-                <a href="#" class="btn secondary">Em Breve</a>
-            </div>
-
-            <div class="card">
-                <div>
-                    <i class="fas fa-users"></i>
-                    <h3>Comunidade & Fórum</h3>
-                    <p>Espaço para troca de conhecimentos sobre DevOps, transição de carreira e Home Labs.</p>
+                    <p>Iniciativa de sustentabilidade e tecnologia. Transformando hardware e otimizando processos físicos e lógicos.</p>
                 </div>
                 <a href="#" class="btn secondary">Em Breve</a>
             </div>
@@ -184,14 +221,13 @@
         </div>
 
         <div class="footer">
-            <p>🚧 Status: <strong>Em construção</strong> — primeiras publicações em breve.</p>
+            <p>🚧 Status: <strong>Em construção e evolução contínua</strong>.</p>
             <div class="social-links">
                 <a href="https://linkedin.com/in/taciosouzaoliveira" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/taciosouzaoliveira" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="mailto:contato@tacio.cloud" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>&copy; 2026 Tácio Souza. Construindo com IA, Kubernetes e Café.</p>
+            <p>&copy; 2026 Tácio Souza. Construído com IA, automação e café.</p>
         </div>
     </div>
 
