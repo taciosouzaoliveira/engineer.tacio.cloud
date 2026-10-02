@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kurumin Tecnologia | Migração para Kubernetes</title>
-<meta name="description" content="Consultoria DevOps: piloto de migração para Kubernetes em ambiente paralelo, com GitOps e observabilidade, sem derrubar sua produção.">
+<title>Kurumin Tecnologia | Consultoria de Infraestrutura e Cloud</title>
+<meta name="description" content="Consultoria de infraestrutura, automação e cloud para PMEs: servidor Linux, backups, CI/CD, containers, Kubernetes e IA. Diagnóstico, implementação, documentação e repasse.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
@@ -41,11 +41,21 @@ ol.steps strong{display:block}
 .cta{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:2.5rem 1.25rem}
 .cta p{max-width:52ch;margin:0 auto 1.25rem;color:var(--muted)}
 footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.kicker{font-size:.9rem;color:var(--green);font-weight:600;margin:0}
+.muted{color:var(--muted);margin-top:-.5rem}
+.pains{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
+.pains li{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.75rem 1rem;font-style:italic}
+.lvl{border-top:3px solid var(--lvl)}
+.lvl.main{border-left:1px solid var(--line)}
+.step{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--lvl)!important;margin:0 0 .25rem!important}
+.support{margin-top:1rem;border-left:3px solid var(--green)}
+code{font-size:.9em;background:var(--line);padding:.1em .35em;border-radius:4px}
+.cta .btn.alt{margin-left:.5rem}
 .whats-float{position:fixed;right:20px;bottom:20px;z-index:1000;display:flex;align-items:center;gap:10px;padding:12px 18px;background:#25d366;color:#fff;font-weight:600;text-decoration:none;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .2s ease}
 .whats-float:hover{transform:scale(1.05)}
 .whats-float:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .whats-float svg{width:21px;height:24px;fill:#fff;flex-shrink:0}
-@media (max-width:520px){.btn.alt{margin:.75rem 0 0}.whats-float{padding:14px}.whats-float span{display:none}}
+@media (max-width:520px){.btn.alt,.cta .btn.alt{margin:.75rem 0 0}.whats-float{padding:14px}.whats-float span{display:none}}
 </style>
 </head>
 <body>
@@ -53,75 +63,103 @@ footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line);color
 <a class="back" href="/">← engineer.tacio.cloud</a>
 
 <header>
-  <h1>Migração para Kubernetes <span>sem derrubar sua produção</span></h1>
-  <p class="lead">A Kurumin Tecnologia monta um ambiente Kubernetes paralelo ao seu atual, com GitOps e observabilidade, para você validar tudo antes de trocar o que está no ar.</p>
-  <a class="btn" href="mailto:contato@tacio.cloud?subject=Consultoria%20Kubernetes">Pedir diagnóstico</a>
-  <a class="btn alt" href="#pacotes">Ver pacotes</a>
+  <p class="kicker">Kurumin Tecnologia · Consultoria de infraestrutura e cloud</p>
+  <h1>Infraestrutura em ordem, <span>sem derrubar o que já funciona</span></h1>
+  <p class="lead">Ajudo pequenas e médias empresas a colocar servidores, deploy e cloud em ordem. Eu diagnostico, implemento, documento e ensino sua equipe a operar. Começo pelo problema mais urgente e só mexo na produção depois de validar.</p>
+  <a class="btn" href="https://wa.me/5579996441081?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Kurumin%20e%20quero%20marcar%20uma%20conversa." target="_blank" rel="noopener">Marcar conversa gratuita</a>
+  <a class="btn alt" href="#servicos">Ver serviços</a>
 </header>
 
 <section>
-  <h2>Para quem é</h2>
-  <p>Para pequenas e médias empresas e times de tecnologia que rodam aplicações em servidores ou containers soltos e querem mais previsibilidade: deploy repetível, rollback rápido e visibilidade do que acontece em produção.</p>
+  <h2>Algum desses soa familiar?</h2>
+  <ul class="pains">
+    <li>“Nosso site está lento ou cai e ninguém sabe por quê.”</li>
+    <li>“Temos um servidor Linux, mas ninguém sabe como ele está configurado.”</li>
+    <li>“O deploy é manual, feito por uma pessoa só, e dá medo mexer.”</li>
+    <li>“Nunca testamos se o backup realmente volta.”</li>
+    <li>“Queremos usar containers, Kubernetes ou IA, mas não sabemos por onde começar.”</li>
+  </ul>
 </section>
 
-<section id="pacotes">
-  <h2>Pacotes</h2>
+<section id="servicos">
+  <h2>Serviços, do primeiro passo ao Cloud Native</h2>
+  <p class="muted">Você não precisa começar pelo Kubernetes. Cada degrau resolve um problema real e prepara o próximo.</p>
   <div class="grid">
-    <div class="card">
-      <h3>Diagnóstico</h3>
-      <p>Entendo seu ambiente atual e entrego um plano de migração claro, antes de qualquer compromisso maior.</p>
-      <ul>
-        <li>Levantamento de aplicações, dependências e riscos</li>
-        <li>Desenho da arquitetura-alvo</li>
-        <li>Plano em etapas, com estimativa de esforço</li>
-      </ul>
-      <p class="tag">Valor sob orçamento</p>
+    <div class="card lvl" style="--lvl:#3fb950">
+      <p class="step">Degrau 1</p>
+      <h3>Presença Web</h3>
+      <p>Seu site no ar, com domínio, HTTPS e e-mail profissional.</p>
+      <ul><li>Site institucional ou landing page</li><li>Domínio, DNS e HTTPS</li><li>E-mail com SPF, DKIM e DMARC</li></ul>
     </div>
-    <div class="card main">
-      <h3>Piloto de migração</h3>
-      <p>Uma aplicação sua rodando em Kubernetes, em ambiente paralelo, para você ver funcionando antes de decidir o resto.</p>
-      <ul>
-        <li>Cluster paralelo, sem tocar na produção</li>
-        <li>Deploy por GitOps (Argo CD)</li>
-        <li>Métricas e painéis (Prometheus e Grafana)</li>
-        <li>Documentação e repasse para sua equipe</li>
-      </ul>
-      <p class="tag">Valor e prazo definidos após o diagnóstico</p>
+    <div class="card lvl" style="--lvl:#58a6ff">
+      <p class="step">Degrau 2</p>
+      <h3>Servidor em Ordem</h3>
+      <p>Linux seguro, com backup testado e tudo documentado.</p>
+      <ul><li>Diagnóstico e atualização</li><li>Nginx, usuários, SSH e firewall</li><li>Backups com teste de restauração</li></ul>
     </div>
-    <div class="card">
-      <h3>Suporte mensal</h3>
-      <p>Acompanhamento depois do piloto, para o ambiente continuar saudável enquanto sua equipe ganha autonomia.</p>
-      <ul>
-        <li>Atualizações e correções do cluster</li>
-        <li>Revisão de alertas e custos</li>
-        <li>Horas de consultoria para dúvidas</li>
-      </ul>
-      <p class="tag">Valor mensal sob orçamento</p>
+    <div class="card lvl" style="--lvl:#a371f7">
+      <p class="step">Degrau 3</p>
+      <h3>Deploy Automático</h3>
+      <p>Do <code>git push</code> para produção, sem passo manual.</p>
+      <ul><li>Git e GitHub organizados</li><li>CI/CD com GitHub Actions</li><li>Scripts e rollback</li></ul>
     </div>
+    <div class="card lvl" style="--lvl:#f0883e">
+      <p class="step">Degrau 4</p>
+      <h3>Containers</h3>
+      <p>Sua aplicação empacotada, rodando igual em qualquer lugar.</p>
+      <ul><li>Docker e Docker Compose</li><li>Ambientes reproduzíveis</li><li>Infraestrutura como código (Terraform, Ansible)</li></ul>
+    </div>
+    <div class="card lvl main" style="--lvl:#f85149">
+      <p class="step">Degrau 5</p>
+      <h3>Kubernetes sem Susto</h3>
+      <p>Piloto em ambiente paralelo, para você ver funcionando antes de decidir.</p>
+      <ul><li>Cluster paralelo, sem tocar na produção</li><li>GitOps com Argo CD</li><li>Prometheus e Grafana</li></ul>
+    </div>
+    <div class="card lvl" style="--lvl:#39c5cf">
+      <p class="step">Sob medida</p>
+      <h3>IA Aplicada</h3>
+      <p>IA trabalhando com os seus dados, sem expor os seus dados.</p>
+      <ul><li>LLMs locais ou em nuvem</li><li>Automações e agentes</li><li>Análise de logs e documentos</li></ul>
+    </div>
+  </div>
+  <div class="card support">
+    <h3>Suporte mensal</h3>
+    <p>Depois da entrega, acompanho o ambiente com monitoramento, atualizações, revisão de alertas e custos, e um banco de horas para dúvidas, enquanto sua equipe ganha autonomia.</p>
   </div>
 </section>
 
 <section>
   <h2>Como funciona</h2>
   <ol class="steps">
-    <li><strong>Conversa inicial</strong>Você conta o cenário e o que quer resolver. Sem custo.</li>
-    <li><strong>Diagnóstico</strong>Mapeio o ambiente e apresento o plano.</li>
-    <li><strong>Piloto em ambiente paralelo</strong>Sua produção segue intacta enquanto o novo ambiente é validado.</li>
-    <li><strong>Decisão e repasse</strong>Você decide como avançar, e eu documento e treino quem for operar.</li>
+    <li><strong>Conversa inicial (30 min, sem custo)</strong>Você conta o cenário e o que quer resolver.</li>
+    <li><strong>Diagnóstico</strong>Mapeio o ambiente e entrego os riscos em ordem de prioridade, com um plano por etapas.</li>
+    <li><strong>Proposta com escopo fechado</strong>Você sabe o que será entregue, quando e quanto custa antes de começar.</li>
+    <li><strong>Execução com segurança</strong>Backup antes de qualquer mudança e validação em ambiente paralelo quando for preciso.</li>
+    <li><strong>Documentação e repasse</strong>Tudo documentado, com uma sessão de treinamento para quem vai operar.</li>
   </ol>
 </section>
 
 <section>
-  <h2>Como eu trabalho</h2>
-  <p>Eu sou o Tácio Souza, Cloud Engineer com base em Linux, Kubernetes, Terraform e automação. Possuo a certificação LFCS e estou na trilha de certificações da Linux Foundation e da CNCF. Aplico em um laboratório próprio, documentado em público, as mesmas práticas que proponho aos clientes.</p>
-  <p><a href="/docs/">Ver a documentação do laboratório</a> e <a href="https://github.com/taciosouzaoliveira">os repositórios no GitHub</a>.</p>
+  <h2>Compromissos</h2>
+  <div class="grid">
+    <div class="card"><h3>Produção é sagrada</h3><p>Nada vai para o ar sem backup e sem validação.</p></div>
+    <div class="card"><h3>Documentar sempre</h3><p>Se não está documentado, não foi entregue.</p></div>
+    <div class="card"><h3>Sem dependência</h3><p>O objetivo é sua equipe precisar cada vez menos de mim.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Quem está por trás</h2>
+  <p>Eu sou o Tácio Souza, Cloud Engineer com base em Linux, Kubernetes, Terraform e automação. Tenho a certificação LFCS e estou na trilha de certificações da Linux Foundation e da CNCF. Aplico em um laboratório próprio, documentado em público, as mesmas práticas que proponho aos clientes. Este site é o primeiro case: domínio próprio, HTTPS e publicação automatizada pelo GitHub.</p>
+  <p><a href="/">Ver o laboratório</a> · <a href="https://github.com/taciosouzaoliveira" target="_blank" rel="noopener">Repositórios no GitHub</a> · <a href="https://linkedin.com/in/taciosouzaoliveira" target="_blank" rel="noopener">LinkedIn</a></p>
 </section>
 
 <section>
   <div class="cta">
     <h2>Vamos conversar sobre o seu ambiente?</h2>
     <p>Mande um resumo do que você roda hoje e o que quer melhorar. Respondo com os próximos passos.</p>
-    <a class="btn" href="mailto:contato@tacio.cloud?subject=Consultoria%20Kubernetes">contato@tacio.cloud</a>
+    <a class="btn" href="https://wa.me/5579996441081?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Kurumin%20e%20quero%20marcar%20uma%20conversa." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <a class="btn alt" href="mailto:contato@tacio.cloud?subject=Consultoria%20Kurumin">contato@tacio.cloud</a>
   </div>
 </section>
 
