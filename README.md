@@ -1,8 +1,8 @@
 # engineer.tacio.cloud
 
-> Site do meu laboratório DevOps e da página de consultoria da Kurumin Tecnologia, publicado com domínio próprio, HTTPS e deploy automatizado pelo GitHub.
+> Site do meu laboratório DevOps, publicado com domínio próprio, HTTPS e deploy automatizado pelo GitHub. A consultoria da Kurumin Tecnologia agora tem site próprio em [kurumintecnologia.com.br](https://kurumintecnologia.com.br).
 
-**No ar:** [engineer.tacio.cloud](https://engineer.tacio.cloud) · [Consultoria](https://engineer.tacio.cloud/consultoria/)
+**No ar:** [engineer.tacio.cloud](https://engineer.tacio.cloud) · [Kurumin Tecnologia](https://kurumintecnologia.com.br)
 
 ## O problema
 
@@ -13,7 +13,7 @@ Eu precisava de um lugar para documentar o laboratório em público e apresentar
 - Site estático em HTML e CSS, leve e rápido no celular
 - Domínio próprio com HTTPS
 - Publicação automática com GitHub Pages: cada commit na branch principal atualiza o site
-- Página de consultoria com a escada de serviços da Kurumin Tecnologia
+- A antiga página `/consultoria/` redireciona para o site da Kurumin
 
 ## Por que isso importa
 
@@ -25,7 +25,7 @@ Este repositório é o primeiro case do serviço **Presença Web** da Kurumin: o
 .
 ├── index.html            # Laboratório
 ├── consultoria/
-│   └── index.html        # Página da Kurumin Tecnologia
+│   └── index.html        # Redireciona para kurumintecnologia.com.br
 └── README.md
 ```
 
@@ -44,4 +44,4 @@ Depois do push, o GitHub Pages publica a nova versão automaticamente.
 
 ---
 
-Feito por [Tácio Souza](https://tacio.cloud) · [Kurumin Tecnologia](https://engineer.tacio.cloud/consultoria/)
+Feito por [Tácio Souza](https://tacio.cloud) · [Kurumin Tecnologia](https://kurumintecnologia.com.br)
