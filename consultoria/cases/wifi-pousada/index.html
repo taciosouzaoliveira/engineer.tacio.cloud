@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case: rede Wi-Fi estruturada numa pousada | Kurumin Tecnologia</title>
+<meta property="og:image" content="https://engineer.tacio.cloud/consultoria/cases/wifi-pousada/img/antena-instalada.jpg">
+<meta name="description" content="Como uma pousada no interior de Sergipe passou de Wi-Fi fraco nos quartos para uma rede estruturada com cabo, switch PoE e pontos de acesso Intelbras AP 360.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0f17;--card:#161b22;--line:#30363d;--text:#c9d1d9;--muted:#8b949e;--blue:#58a6ff;--green:#3fb950}
+@media (prefers-color-scheme:light){:root{--bg:#f6f8fa;--card:#fff;--line:#d0d7de;--text:#24292f;--muted:#57606a;--blue:#0969da;--green:#1a7f37}}
+*{box-sizing:border-box}
+html{scroll-padding-top:1rem}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--blue)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+main{max-width:960px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.back{font-size:.9rem;color:var(--muted);text-decoration:none}
+header{padding:3rem 0 2rem;border-bottom:1px solid var(--line)}
+h1{font-family:"Ubuntu","Segoe UI",system-ui,sans-serif;font-weight:700;letter-spacing:-.01em;font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:.5rem 0 1rem;max-width:20ch}
+h1 span{color:var(--blue)}
+.lead{max-width:62ch;color:var(--muted);font-size:1.1rem;margin:0 0 1.5rem}
+.btn{display:inline-block;background:var(--blue);color:#0b0f17;font-weight:700;padding:.75rem 1.25rem;border-radius:8px;text-decoration:none}
+.btn.alt{background:transparent;color:var(--blue);border:1px solid var(--line);margin-left:.5rem}
+section{margin-top:3rem}
+h2{font-size:1.5rem;margin:0 0 1rem}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1.25rem}
+.card h3{margin:0 0 .5rem;font-size:1.15rem}
+.card p{margin:.5rem 0;color:var(--muted)}
+.card ul{margin:.75rem 0 0;padding-left:1.1rem}
+.card li{margin:.3rem 0}
+.main{border-left:3px solid var(--blue)}
+.tag{font-size:.85rem;color:var(--green);font-weight:600}
+ol.steps{list-style:none;counter-reset:s;padding:0;margin:0;display:grid;gap:.75rem}
+ol.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem 1rem 1rem 3.25rem;position:relative}
+ol.steps li::before{content:counter(s);position:absolute;left:1rem;top:1rem;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--blue);color:#0b0f17;font-weight:700;display:grid;place-items:center;font-size:.9rem}
+ol.steps strong{display:block}
+.cta{text-align:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:2.5rem 1.25rem}
+.cta p{max-width:52ch;margin:0 auto 1.25rem;color:var(--muted)}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.kicker{font-size:.9rem;color:var(--green);font-weight:600;margin:0}
+.muted{color:var(--muted);margin-top:-.5rem}
+.pains{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
+.pains li{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.75rem 1rem;font-style:italic}
+.lvl{border-top:3px solid var(--lvl)}
+.lvl.main{border-left:1px solid var(--line)}
+.step{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--lvl)!important;margin:0 0 .25rem!important}
+.support{margin-top:1rem;border-left:3px solid var(--green)}
+code{font-size:.9em;background:var(--line);padding:.1em .35em;border-radius:4px}
+.cta .btn.alt{margin-left:.5rem}
+.whats-float{position:fixed;right:20px;bottom:20px;z-index:1000;display:flex;align-items:center;gap:10px;padding:12px 18px;background:#25d366;color:#fff;font-weight:600;text-decoration:none;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.35);transition:transform .2s ease}
+.whats-float:hover{transform:scale(1.05)}
+.whats-float:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.whats-float svg{width:21px;height:24px;fill:#fff;flex-shrink:0}
+@media (max-width:520px){.btn.alt,.cta .btn.alt{margin:.75rem 0 0}.whats-float{padding:14px}.whats-float span{display:none}}
+
+.facts{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:1.5rem}
+.facts .card p{margin:.25rem 0 0}
+.facts h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0}
+figure{margin:1.5rem 0}
+figure.diagram{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:1rem;overflow-x:auto}
+figure.diagram svg{width:100%;min-width:640px;height:auto;display:block}
+figcaption{color:var(--muted);font-size:.9rem;margin-top:.75rem}
+.layers{display:grid;gap:.5rem;margin:1rem 0}
+.layers div{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:.75rem 1rem}
+.layers div.hit{border-left:3px solid #f85149}
+.layers b{display:block}
+.layers span{color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th,td{text-align:left;padding:.65rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.9rem;color:var(--muted)}
+.table-wrap{overflow-x:auto}
+.gallery{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.gallery figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.gallery img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+.gallery figcaption{padding:.6rem .8rem;margin:0}
+.case-item{display:grid;grid-template-columns:160px 1fr;gap:1.25rem;align-items:center;text-decoration:none;color:inherit}
+.case-item img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;display:block}
+.case-item h3{color:var(--text)}
+.case-item:hover h3{color:var(--blue)}
+.meta{font-size:.9rem;color:var(--muted);margin:0}
+@media (max-width:560px){.case-item{grid-template-columns:1fr}.case-item img{aspect-ratio:16/9}}
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="../">← Todos os cases</a>
+
+<header>
+  <p class="kicker">Case · Redes e Wi-Fi · 2024</p>
+  <h1>Wi-Fi em todos os quartos <span>de uma pousada</span></h1>
+  <p class="lead">Uma pousada no interior de Sergipe tinha internet boa na recepção e sinal fraco nos quartos. A solução foi trocar a repetição de sinal pelo ar por uma rede estruturada: cabo, switch com PoE e pontos de acesso em cada área.</p>
+  <div class="facts">
+    <div class="card"><h3>Problema</h3><p>Sinal fraco e instável longe da recepção</p></div>
+    <div class="card"><h3>Causa</h3><p>Distância, paredes e repetição sem fio</p></div>
+    <div class="card"><h3>Solução</h3><p>Distribuição por cabo e pontos de acesso com PoE</p></div>
+    <div class="card"><h3>Resultado</h3><p>Cobertura nos quartos e no refeitório</p></div>
+  </div>
+</header>
+
+<section>
+  <h2>A situação inicial</h2>
+  <p>O roteador ficava na recepção, e os quartos ficavam em blocos afastados. Wi-Fi é onda de rádio: perde força com a distância e com cada parede que atravessa. O sinal até chegava, mas fraco demais para uma conexão estável.</p>
+  <p>A primeira tentativa foi usar um ponto de acesso Intelbras AP 360 repetindo o sinal pelo ar. A cobertura melhorou, mas a taxa de transferência caiu muito. Um repetidor sem fio usa o mesmo rádio para receber e para retransmitir, então divide o tempo entre as duas tarefas, e cada salto custa desempenho.</p>
+</section>
+
+<section>
+  <h2>O diagnóstico, camada por camada</h2>
+  <p>Olhando a rede pelas camadas do modelo TCP/IP, dá para separar onde o problema estava e onde não estava:</p>
+  <div class="layers">
+    <div><b>Aplicação</b><span>WhatsApp, navegador, e-mail. Funcionavam normalmente perto da recepção.</span></div>
+    <div><b>Transporte</b><span>O TCP garante a entrega. Com sinal fraco, ele precisa reenviar pacotes, e tudo fica lento.</span></div>
+    <div><b>Internet</b><span>O endereçamento IP estava correto.</span></div>
+    <div class="hit"><b>Acesso à rede</b><span>O meio físico: sinal de rádio fraco e conectores oxidados. Era aqui o problema.</span></div>
+  </div>
+  <p>Trocar o plano de internet ou a configuração não resolveria. Era preciso mudar o caminho físico do sinal.</p>
+</section>
+
+<section>
+  <h2>A solução: rede estruturada</h2>
+  <p>A rede passou a seguir o modelo hierárquico usado em redes corporativas, com três camadas. Na <strong>borda</strong>, o roteador principal conecta a internet do provedor e distribui os endereços. Na <strong>distribuição</strong>, um switch com PoE leva a rede por cabo até cada área. No <strong>acesso</strong>, um ponto de acesso em cada bloco atende os hóspedes de perto.</p>
+  <figure class="diagram">
+<svg viewBox="0 0 980 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="topo-t topo-d" class="topo">
+<title id="topo-t">Topologia da rede da pousada</title>
+<desc id="topo-d">Modelo hierárquico em três camadas. Borda: internet do provedor ligada ao roteador principal, que também atende a recepção e as câmeras. Distribuição: switch Intelbras SF 800 Q+ com PoE passivo, ligado ao roteador por cabo. Acesso: cinco pontos de acesso Intelbras AP 360, nos blocos A, B, C e D e no refeitório, alimentados por PoE.</desc>
+<style>
+.topo .body{fill:var(--card);stroke:var(--text);stroke-width:2.5}
+.topo .glyph{fill:none;stroke:var(--blue);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.topo .glyph-fill{fill:var(--blue)}
+.topo .wave{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round}
+.topo .led{fill:var(--green)}
+.topo .utp{stroke:var(--text);stroke-width:2.5;fill:none}
+.topo .poe{stroke:var(--blue);stroke-width:3.5;fill:none}
+.topo .wan{stroke:var(--muted);stroke-width:2.5;fill:none;stroke-dasharray:8 6}
+.topo .tier{stroke:var(--line);stroke-width:1.5;stroke-dasharray:4 6}
+.topo .lbl{font:600 15px system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--text)}
+.topo .sub{font:13px system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--muted)}
+.topo .tierlbl{font:700 12px system-ui,-apple-system,"Segoe UI",sans-serif;fill:var(--muted);letter-spacing:.06em}
+.topo .port{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;fill:var(--muted)}
+</style>
+<line x1="20" y1="112" x2="960" y2="112" class="tier"/><text x="26" y="130" class="tierlbl" text-anchor="start">BORDA</text>
+<line x1="20" y1="296" x2="960" y2="296" class="tier"/><text x="26" y="314" class="tierlbl" text-anchor="start">DISTRIBUIÇÃO</text>
+<line x1="20" y1="432" x2="960" y2="432" class="tier"/><text x="26" y="450" class="tierlbl" text-anchor="start">ACESSO</text>
+<path d="M490 102 V168" class="wan"/>
+<text x="500" y="140" class="port" text-anchor="start">WAN · internet do provedor</text>
+<path d="M456 200 H262 M524 200 H718" class="utp"/>
+<path d="M490 236 V308" class="utp"/>
+<text x="480" y="290" class="port" text-anchor="end">UTP · uplink</text>
+<path d="M490 354 V410 H110 V470" class="poe"/>
+<path d="M490 354 V410 H300 V470" class="poe"/>
+<path d="M490 354 V410 H490 V470" class="poe"/>
+<path d="M490 354 V410 H680 V470" class="poe"/>
+<path d="M490 354 V410 H870 V470" class="poe"/>
+<text x="500" y="384" class="port" text-anchor="start">UTP + PoE passivo</text>
+<g class="dev"><path class="body" d="M420 92 Q394 92 398 68 Q402 44 432 48 Q442 22 478 28 Q508 12 532 36 Q572 34 574 66 Q588 92 556 92 z"/></g><text x="490" y="78" class="lbl" text-anchor="middle">Internet</text>
+<g class="dev"><circle cx="490" cy="200" r="34" class="body"/>
+<path class="glyph" d="M471.3 200 H482 M498 200 H508.7 M490 181.3 V192 M490 208 V218.7"/>
+<path class="glyph" d="M479.3 194 L471.3 200 L479.3 206 M500.7 194 L508.7 200 L500.7 206 M484 189.3 L490 181.3 L496 189.3 M484 210.7 L490 218.7 L496 210.7"/></g><text x="506" y="258" class="lbl" text-anchor="start">Roteador principal</text><text x="506" y="276" class="sub" text-anchor="start">gateway e DHCP</text>
+<g class="dev"><rect x="190" y="174" width="60" height="40" rx="4" class="body"/><path class="glyph" d="M206 224 H234 M220 214 V224"/></g><text x="220" y="248" class="lbl" text-anchor="middle">Recepção</text><text x="220" y="266" class="sub" text-anchor="middle">estação de trabalho</text>
+<g class="dev"><rect x="730" y="184" width="46" height="32" rx="6" class="body"/><path class="body" d="M776 192 L792 184 V216 L776 208 z"/><circle cx="753" cy="200" r="7" class="glyph-fill"/></g><text x="760" y="248" class="lbl" text-anchor="middle">Câmeras</text><text x="760" y="266" class="sub" text-anchor="middle">CFTV</text>
+<g class="dev"><rect x="415.0" y="308.0" width="150" height="46" rx="6" class="body"/><path class="glyph" d="M446 322 H534"/><path class="glyph" d="M526 316 L534 322 L526 328"/><path class="glyph" d="M446 340 H534"/><path class="glyph" d="M454 334 L446 340 L454 346"/></g><text x="612" y="326" class="lbl" text-anchor="start">Intelbras SF 800 Q+</text><text x="612" y="344" class="sub" text-anchor="start">8 portas Fast Ethernet, PoE passivo</text>
+<g class="dev"><rect x="84" y="486" width="52" height="28" rx="14" class="body"/>
+<path class="wave" d="M94 478 Q110 464 126 478 M84 472 Q110 450 136 472"/>
+<circle cx="110" cy="500" r="4" class="led"/></g><text x="110" y="540" class="lbl" text-anchor="middle">Bloco A</text><text x="110" y="558" class="sub" text-anchor="middle">Intelbras AP 360</text>
+<g class="dev"><rect x="274" y="486" width="52" height="28" rx="14" class="body"/>
+<path class="wave" d="M284 478 Q300 464 316 478 M274 472 Q300 450 326 472"/>
+<circle cx="300" cy="500" r="4" class="led"/></g><text x="300" y="540" class="lbl" text-anchor="middle">Bloco B</text><text x="300" y="558" class="sub" text-anchor="middle">Intelbras AP 360</text>
+<g class="dev"><rect x="464" y="486" width="52" height="28" rx="14" class="body"/>
+<path class="wave" d="M474 478 Q490 464 506 478 M464 472 Q490 450 516 472"/>
+<circle cx="490" cy="500" r="4" class="led"/></g><text x="490" y="540" class="lbl" text-anchor="middle">Bloco C</text><text x="490" y="558" class="sub" text-anchor="middle">Intelbras AP 360</text>
+<g class="dev"><rect x="654" y="486" width="52" height="28" rx="14" class="body"/>
+<path class="wave" d="M664 478 Q680 464 696 478 M654 472 Q680 450 706 472"/>
+<circle cx="680" cy="500" r="4" class="led"/></g><text x="680" y="540" class="lbl" text-anchor="middle">Bloco D</text><text x="680" y="558" class="sub" text-anchor="middle">Intelbras AP 360</text>
+<g class="dev"><rect x="844" y="486" width="52" height="28" rx="14" class="body"/>
+<path class="wave" d="M854 478 Q870 464 886 478 M844 472 Q870 450 896 472"/>
+<circle cx="870" cy="500" r="4" class="led"/></g><text x="870" y="540" class="lbl" text-anchor="middle">Refeitório</text><text x="870" y="558" class="sub" text-anchor="middle">Intelbras AP 360</text>
+<path d="M40 600 H90" class="utp"/><text x="100" y="605" class="sub" text-anchor="start">Cabo UTP</text>
+<path d="M220 600 H270" class="poe"/><text x="280" y="605" class="sub" text-anchor="start">UTP com alimentação PoE</text>
+<path d="M490 600 H540" class="wan"/><text x="550" y="605" class="sub" text-anchor="start">Link do provedor</text>
+<path class="wave" d="M720 604 Q735 590 750 604"/><text x="762" y="605" class="sub" text-anchor="start">Rede sem fio para os hóspedes</text>
+</svg>
+    <figcaption>Topologia da rede. Os pontos de acesso recebem dados e energia pelo mesmo cabo (PoE), sem precisar de tomada em cada local.</figcaption>
+  </figure>
+  <p>Pelo cabo, cada ponto de acesso recebe a conexão sem a perda da repetição sem fio, e o rádio fica dedicado aos aparelhos que estão por perto.</p>
+</section>
+
+<section>
+  <h2>O que foi feito</h2>
+  <ol class="steps">
+    <li><strong>Levantamento</strong>Onde o sinal falhava, as distâncias entre os blocos e os caminhos possíveis para o cabo.</li>
+    <li><strong>Cabeamento</strong>Cabo UTP para área externa do roteador principal até o ponto de distribuição e de lá até os pontos de acesso.</li>
+    <li><strong>Conectores</strong>Troca dos conectores RJ45 oxidados pela umidade e nova crimpagem no padrão T568B.</li>
+    <li><strong>Alimentação</strong>Pontos de acesso alimentados por PoE passivo, pelo switch e por injetor.</li>
+    <li><strong>Organização</strong>Cabos e equipamentos arrumados para facilitar a manutenção.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Equipamentos</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Equipamento</th><th>Papel na rede</th></tr></thead>
+    <tbody>
+      <tr><td>Roteador principal</td><td>Borda: conexão com o provedor, gateway e DHCP</td></tr>
+      <tr><td>Intelbras SF 800 Q+</td><td>Distribuição: switch de 8 portas Fast Ethernet com PoE passivo</td></tr>
+      <tr><td>Intelbras AP 360</td><td>Acesso: ponto de acesso corporativo nos blocos e no refeitório</td></tr>
+      <tr><td>Intelbras WOG 212</td><td>Estação outdoor 2,4 GHz com antena de 12 dBi, para a área externa</td></tr>
+      <tr><td>Injetor PoE Intelbras</td><td>Alimentação de equipamento pelo cabo de rede</td></tr>
+      <tr><td>Cabo UTP para área externa e conectores RJ45</td><td>Meio físico entre os equipamentos</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>Boas práticas para uma rede assim</h2>
+  <div class="grid">
+    <div class="card"><h3>Um só DHCP</h3><p>Só o roteador principal entrega endereços. Equipamentos intermediários ficam em modo ponto de acesso.</p></div>
+    <div class="card"><h3>Mesmo nome, canais diferentes</h3><p>Um único nome de rede em todos os pontos e canais que não se sobrepõem, como 1, 6 e 11 em 2,4 GHz.</p></div>
+    <div class="card"><h3>Medir antes e depois</h3><p>Testes com <code>ping</code> e <code>iperf3</code> mostram onde está o gargalo e comprovam o resultado.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Fotos do trabalho</h2>
+  <div class="gallery">
+    <figure><img src="img/antena-instalada.jpg" alt="Tácio ao lado da WOG 212 instalada na parede" loading="lazy"><figcaption>WOG 212 instalada</figcaption></figure>
+    <figure><img src="img/pares-do-cabo.jpg" alt="Pares de um cabo de rede separados para a crimpagem" loading="lazy"><figcaption>Pares do cabo separados</figcaption></figure>
+    <figure><img src="img/crimpagem.jpg" alt="Fios prontos para a crimpagem ao lado do conector RJ45 e do alicate" loading="lazy"><figcaption>Crimpagem dos conectores</figcaption></figure>
+    <figure><img src="img/cabo-externo.jpg" alt="Ponta de um rolo de cabo UTP para área externa com os pares trançados" loading="lazy"><figcaption>Cabo UTP para área externa</figcaption></figure>
+    <figure><img src="img/switch-poe.jpg" alt="Switch Intelbras SF 800 Q+ com vários cabos conectados" loading="lazy"><figcaption>Switch SF 800 Q+ com PoE</figcaption></figure>
+    <figure><img src="img/injetor-poe.jpg" alt="Injetor PoE Intelbras ligado com cabo conectado" loading="lazy"><figcaption>Injetor PoE</figcaption></figure>
+    <figure><img src="img/access-point.jpg" alt="Caixa do ponto de acesso corporativo Intelbras AP 360" loading="lazy"><figcaption>Ponto de acesso AP 360</figcaption></figure>
+    <figure><img src="img/antena-outdoor.jpg" alt="Estação outdoor Intelbras WOG 212 segurada na mão" loading="lazy"><figcaption>Estação outdoor WOG 212</figcaption></figure>
+    <figure><img src="img/ferramentas.jpg" alt="Alicate de crimpagem e decapador de cabos" loading="lazy"><figcaption>Alicate e decapador</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <div class="cta">
+    <h2>Sua empresa tem um canto onde o Wi-Fi não chega?</h2>
+    <p>Conte como está a sua rede hoje. Eu respondo com o diagnóstico e os próximos passos.</p>
+    <a class="btn" href="https://wa.me/5579996441081?text=Ol%C3%A1%2C%20T%C3%A1cio!%20Vi%20o%20case%20da%20pousada%20e%20quero%20conversar%20sobre%20a%20minha%20rede." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <a class="btn alt" href="../">Ver outros cases</a>
+  </div>
+</section>
+
+<footer>© 2026 Kurumin Tecnologia · Tácio Souza</footer>
+</main>
+
+<a class="whats-float"
+   href="https://wa.me/5579996441081?text=Ol%C3%A1%2C%20T%C3%A1cio!%20Vi%20o%20case%20da%20pousada%20e%20quero%20conversar%20sobre%20a%20minha%20rede."
+   target="_blank" rel="noopener"
+   aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+  <span>Fale comigo</span>
+</a>
+</body>
+</html>
