@@ -283,14 +283,14 @@
             <div class="tags">
                 <span class="tag"><i class="fab fa-linux"></i> Linux/Debian</span>
                 <span class="tag">Kubernetes</span>
-                <span class="tag">Terraform & Ansible</span>
+                <span class="tag">Ansible</span>
                 <span class="tag">AIOps</span>
                 <span class="tag">DevSecOps</span>
             </div>
             <div class="tags" style="margin-top: 10px;">
                 <span class="tag cert"><i class="fas fa-check"></i> LFCS</span>
-                <span class="tag pending"><i class="fas fa-clock"></i> Terraform Associate</span>
-                <span class="tag pending"><i class="fas fa-clock"></i> CKA</span>
+                <span class="tag cert"><i class="fas fa-check"></i> OCI ×3</span>
+                <span class="tag pending"><i class="fas fa-clock"></i> CKA · 01/11</span>
                 <span class="tag pending"><i class="fas fa-rocket"></i> Kubestronaut</span>
             </div>
         </header>
@@ -333,56 +333,56 @@
         <div class="grid">
             <div class="card">
                 <div>
-                    <i class="fas fa-server"></i>
-                    <h3>Home Lab Docs</h3>
-                    <p>Documentação técnica da infraestrutura, clusters Kubernetes (kubeadm + Kind), topologia de rede, automações e decisões arquiteturais.</p>
+                    <i class="fas fa-building"></i>
+                    <h3>Kurumin Tecnologia</h3>
+                    <p>Minha consultoria de infraestrutura: diagnóstico, servidores Linux, containers, Kubernetes e observabilidade, com cases publicados.</p>
                 </div>
-                <a href="/docs/" class="btn" target="_blank">Ler Documentação</a>
+                <a href="https://kurumintecnologia.com.br/" class="btn" target="_blank" rel="noopener">Conhecer a Kurumin</a>
             </div>
 
             <div class="card">
                 <div>
                     <i class="fas fa-cubes"></i>
-                    <h3>Cluster Kubernetes</h3>
-                    <p>Cluster kubeadm com 3 nós, CNI Cilium, Argo CD para GitOps e observabilidade com Prometheus + Grafana.</p>
+                    <h3>Cluster Kubernetes como código</h3>
+                    <p>Cluster kubeadm provisionado com Vagrant e KVM/Libvirt, usado no estudo da LFCS e da CKA.</p>
                 </div>
-                <a href="/docs/cluster/" class="btn tertiary" target="_blank">Ver Cluster</a>
+                <a href="https://github.com/taciosouzaoliveira/homelab-lfcs-cka" class="btn tertiary" target="_blank" rel="noopener">Ver no GitHub</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <i class="fas fa-flask"></i>
+                    <h3>Labs de certificação</h3>
+                    <p>Exercícios práticos de administração Linux (LFCS) e laboratórios de Kubernetes para a CKA.</p>
+                </div>
+                <a href="https://github.com/taciosouzaoliveira/kubernetes" class="btn secondary" target="_blank" rel="noopener">Ver labs da CKA</a>
             </div>
 
             <div class="card">
                 <div>
                     <i class="fas fa-robot"></i>
-                    <h3>Projeto Redeem AI</h3>
-                    <p>Agente de observabilidade integrando LLMs locais a logs de sistema. Projeto prático com foco educacional em segurança.</p>
+                    <h3>IA no estudo da CKA</h3>
+                    <p>Método para usar o K8sGPT como apoio no diagnóstico de clusters durante o estudo da CKA.</p>
                 </div>
-                <a href="https://github.com/taciosouzaoliveira" class="btn secondary" target="_blank">Ver Código</a>
-            </div>
-
-            <div class="card">
-                <div>
-                    <i class="fas fa-briefcase"></i>
-                    <h3>Portfólio & Carreira</h3>
-                    <p>Histórico profissional, jornada de certificações (LFCS → CKA → Kubestronaut) e ferramentas de migração desenvolvidas.</p>
-                </div>
-                <a href="https://github.com/taciosouzaoliveira" class="btn secondary" target="_blank">Ver Repositórios</a>
-            </div>
-
-            <div class="card">
-                <div>
-                    <i class="fas fa-recycle"></i>
-                    <h3>Projeto Reciclagem</h3>
-                    <p>Iniciativa de sustentabilidade e tecnologia. Transformando hardware antigo em nós de laboratório e otimizando processos.</p>
-                </div>
-                <a href="#" class="btn secondary">Em Breve</a>
+                <a href="https://github.com/taciosouzaoliveira/k8sgpt-cka-study-guide" class="btn secondary" target="_blank" rel="noopener">Ver o guia</a>
             </div>
 
             <div class="card">
                 <div>
                     <i class="fas fa-book"></i>
-                    <h3>Blog Técnico</h3>
-                    <p>Artigos sobre Kubernetes, Terraform, GitOps, observabilidade e a jornada rumo ao Golden Kubestronaut.</p>
+                    <h3>Livro: Kubernetes do Zero à CKA</h3>
+                    <p>Guia de estudo prático para a certificação CKA, escrito durante a minha própria preparação.</p>
                 </div>
-                <a href="/blog/" class="btn secondary" target="_blank">Ler Artigos</a>
+                <a href="https://www.amazon.com.br/dp/B0HMJHMCK3" class="btn tertiary" target="_blank" rel="noopener">Ver na Amazon</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Portfólio & Repositórios</h3>
+                    <p>Todos os projetos públicos: automação com Ansible, labs de Kubernetes e scripts de administração Linux.</p>
+                </div>
+                <a href="https://github.com/taciosouzaoliveira" class="btn secondary" target="_blank" rel="noopener">Ver Repositórios</a>
             </div>
         </div>
 
@@ -399,10 +399,11 @@
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-icon progress"><i class="fas fa-clock"></i></div>
+                <div class="timeline-icon done"><i class="fas fa-check"></i></div>
                 <div class="timeline-content">
-                    <strong>Terraform Associate (004)</strong>
-                    <span>Agendada para 03/10/2026 · IaC e automação</span>
+                    <strong>Oracle Cloud Infrastructure — Foundations, Architect e AI Foundations Associate</strong>
+                    <span>Aprovadas · Fundamentos e arquitetura de nuvem, IA na OCI</span>
+                    <a class="badge-link" href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=5A20812A71C71FB7669CA4D49F182FF7C3E71D2281A77A5BCD8899620E916C9D" target="_blank" rel="noopener"><i class="fas fa-award"></i> Ver badge Architect</a>
                 </div>
             </div>
 
@@ -410,15 +411,15 @@
                 <div class="timeline-icon progress"><i class="fas fa-clock"></i></div>
                 <div class="timeline-content">
                     <strong>CKA — Certified Kubernetes Administrator</strong>
-                    <span>Agendada para 09/10/2026 · Cluster Architecture, Troubleshooting, Networking</span>
+                    <span>Agendada para 01/11/2026 · Cluster Architecture, Troubleshooting, Networking</span>
                 </div>
             </div>
 
             <div class="timeline-item">
                 <div class="timeline-icon pending"><i class="fas fa-circle"></i></div>
                 <div class="timeline-content">
-                    <strong>CKAD · CKS</strong>
-                    <span>2027 · Desenvolvimento e Segurança em Kubernetes</span>
+                    <strong>KCNA · CKAD · KCSA · CKS → Kubestronaut</strong>
+                    <span>KCNA até dez/2026 · as demais em 2027 · Desenvolvimento e Segurança em Kubernetes</span>
                 </div>
             </div>
 
@@ -426,7 +427,7 @@
                 <div class="timeline-icon pending"><i class="fas fa-rocket"></i></div>
                 <div class="timeline-content">
                     <strong>Golden Kubestronaut</strong>
-                    <span>Meta: 2028 · 15 certificações CNCF + LFCS</span>
+                    <span>Meta: 2028 · Prometheus, OpenTelemetry, GitOps, Argo, Kyverno, Cilium, Istio, Backstage e Platform Engineering</span>
                 </div>
             </div>
         </div>
